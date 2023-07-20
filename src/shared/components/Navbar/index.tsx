@@ -12,7 +12,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import LoginIcon from '@mui/icons-material/Login';
 import Register from '@mui/icons-material/AppRegistration';
 import Dashboard from '@mui/icons-material/Dashboard';
-import NavListDrawer from '@/components/Navbar/NavListDrawer';
+import NavListDrawer from '@/shared/components/Navbar/NavListDrawer';
 import { NavbarList } from '@/shared/utils/global.types';
 
 // Create outside of the component to avoid unnecessary re-rendering (recreation) of it
