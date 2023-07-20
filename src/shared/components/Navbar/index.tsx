@@ -9,6 +9,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
+import AppIcon from '@mui/icons-material/Apple';
 import LoginIcon from '@mui/icons-material/Login';
 import Register from '@mui/icons-material/AppRegistration';
 import Dashboard from '@mui/icons-material/Dashboard';
@@ -27,7 +28,7 @@ export default function Navbar() {
   const [open, setOpen] = useState<boolean>(false);
 
   const change = useCallback(() => {
-    setOpen(false);
+    setOpen((b) => !b);
   }, []);
 
   return (
@@ -38,11 +39,13 @@ export default function Navbar() {
           size="large"
           edge="start"
           aria-label="menu"
-          onClick={() => setOpen(true)}
+          onClick={change}
           sx={{ display: { xs: 'flex', md: 'none' } }}
-        />
-        <MenuIcon />
+        >
+          <MenuIcon />
+        </IconButton>
 
+        <AppIcon sx={{ mt: '-4px' }} />
         <Typography
           variant="h6"
           sx={{ flexGrow: 1 /* to width almost all the space */ }}
